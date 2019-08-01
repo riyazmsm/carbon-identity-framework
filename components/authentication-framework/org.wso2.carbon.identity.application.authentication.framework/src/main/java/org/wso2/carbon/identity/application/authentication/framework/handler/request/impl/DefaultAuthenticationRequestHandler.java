@@ -405,9 +405,9 @@ public class DefaultAuthenticationRequestHandler implements AuthenticationReques
                                String sessionKey, String tenantDomain) throws FrameworkException {
         Integer authCookieAge = null;
 
-        if (context.isRememberMe()) {
+        //if (context.isRememberMe()) {
             authCookieAge = IdPManagementUtil.getRememberMeTimeout(tenantDomain);
-        }
+        //}
 
         FrameworkUtils.storeAuthCookie(request, response, sessionKey, authCookieAge);
     }
